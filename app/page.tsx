@@ -7,6 +7,7 @@ import Learning from "@/components/learning";
 import Navbar from "@/components/Navbar";
 import OnlinePortal from "@/components/onlinePortal";
 import LeadershipSection from "@/components/team";
+import UsefulLinks from "@/components/uselinks";
 import Image from "next/image";
 
 export default function Home() {
@@ -19,6 +20,7 @@ export default function Home() {
        <LeadershipSection/>
        <Learning/>
        <OnlinePortal/>
+       <UsefulLinks />
        <Joinmsku/>
        <SkUniversityFooter/>
     </div>
