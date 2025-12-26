@@ -1,74 +1,118 @@
+"use client"
+
+import { motion } from "framer-motion"
+
 export default function Learning() {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-sky-100 to-sky-200 flex justify-center items-center m-1 ">
+    <main className="min-h-screen w-full bg-gradient-to-br  flex justify-center items-center px-4 md:px-12 py-16 overflow-hidden">
 
-      <div className="max-w-6xl w-full bg-white/90 backdrop-blur-lg shadow-2xl rounded-3xl p-10 transform transition duration-500 hover:shadow-[0_20px_60px_rgba(14,165,233,0.3)]">
+      <motion.div
+        initial={{ opacity: 0, y: 60 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="w-full max-w-7xl bg-white/80 backdrop-blur-xl shadow-[0_30px_80px_rgba(14,165,233,0.35)] rounded-[2.5rem] p-8 md:p-14"
+      >
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-14 items-center">
 
-          {/* LEFT SIDE */}
-          <div className="group">
+          {/* LEFT SECTION */}
+          <motion.div
+            initial={{ opacity: 0, x: -80 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="space-y-10"
+          >
 
             {/* HEADING */}
-            <h1 className="text-4xl md:text-5xl font-extrabold text-sky-900 leading-tight mb-15 tracking-tight transition duration-500 group-hover:text-sky-700">
-              A Leading and<br />
-              Diverse University<br />
-              with a strong<br />
+            <h1 className="text-4xl md:text-5xl xl:text-6xl font-extrabold text-sky-900 leading-tight tracking-tight">
+              A Leading and <br />
+              <span className="text-sky-600">Diverse University</span> <br />
+              with a strong <br />
               commitment.
             </h1>
 
             {/* IMAGE */}
-            <div className="overflow-hidden rounded-2xl shadow-xl transition transform duration-500 group-hover:scale-[1.02]">
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              className="overflow-hidden rounded-3xl shadow-2xl"
+            >
               <img
                 src="/kk.webp"
                 alt="University Campus"
-                className="w-full object-cover rounded-2xl transition duration-700 ease-out group-hover:scale-110"
+                className="w-full h-[320px] object-cover transition-transform duration-700"
               />
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
 
-          {/* RIGHT SIDE */}
-          <div className="text-sky-800 leading-relaxed">
+          {/* RIGHT SECTION */}
+          <motion.div
+            initial={{ opacity: 0, x: 80 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="text-sky-800"
+          >
 
-            <p className="mb-4 text-lg animate-fadeIn">
-              Founded with a vision of excellence, our university began as a small
-              institution with a bold dream — to empower minds and shape the
-              future. Over the years, it has grown into one of the most diverse
-              and dynamic universities in the region.
-            </p>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6 }}
+              className="text-lg mb-5"
+            >
+              Founded with a vision of excellence, our university began as a
+              small institution with a bold dream  to empower minds and shape
+              the future.
+            </motion.p>
 
-            <p className="mb-6 text-lg animate-fadeIn animation-delay-200">
-              With a commitment to innovation, research, and community impact, we
-              continue to inspire the next generation of leaders and changemakers.
-              The university stands as a beacon of opportunity and success.
-            </p>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.8 }}
+              className="text-lg mb-8"
+            >
+              With innovation, research, and community impact at its core,
+              the university continues to inspire leaders and changemakers.
+            </motion.p>
 
             {/* FEATURE LIST */}
-            <div className="space-y-3 mb-8">
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={{
+                visible: {
+                  transition: { staggerChildren: 0.15 }
+                }
+              }}
+              className="space-y-4"
+            >
               {[
                 "Quality Education & Skill Development",
                 "Career Opportunities & Higher Earning Potential",
-                "Networking & Connections",
+                "Networking & Global Connections",
                 "Personal Growth & Independence",
                 "Access to Research & Innovation"
               ].map((text, i) => (
-                <div
+                <motion.div
                   key={i}
-                  className="flex items-center gap-3 bg-sky-50 border border-sky-100 rounded-xl p-3 transition duration-300 hover:bg-sky-100 hover:shadow-md"
+                  variants={{
+                    hidden: { opacity: 0, x: 40 },
+                    visible: { opacity: 1, x: 0 }
+                  }}
+                  whileHover={{ scale: 1.03 }}
+                  transition={{ duration: 0.3 }}
+                  className="flex items-center gap-4 bg-white/70 border border-sky-200 rounded-2xl p-4 shadow-md hover:shadow-xl"
                 >
-                  <span className="bg-sky-600 text-white w-8 h-8 flex justify-center items-center rounded-full text-sm font-bold shadow">
+                  <span className="bg-gradient-to-br from-sky-500 to-sky-700 text-white w-9 h-9 flex justify-center items-center rounded-full font-bold shadow-lg">
                     ✓
                   </span>
-                  <p className="font-medium">{text}</p>
-                </div>
+                  <p className="font-semibold">{text}</p>
+                </motion.div>
               ))}
-            </div>
+            </motion.div>
 
-           
-
-          </div>
+          </motion.div>
         </div>
-      </div>
+      </motion.div>
     </main>
-  );
+  )
 }

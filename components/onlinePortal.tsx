@@ -12,7 +12,7 @@ export default function OnlinePortal() {
   ];
 
   return (
-    <section className="w-full bg-sky-50 py-16">
+    <section className="w-full  py-16">
       <div className="max-w-6xl mx-auto text-center px-6">
 
         <h2 className="text-4xl font-bold text-sky-900 mb-12 tracking-wide">

@@ -1,6 +1,6 @@
 export default function Joinmsku() {
   return (
-    <section className="w-full bg-sky-100 flex justify-center py-10">
+    <section className="w-full  flex justify-center py-10">
       <div className="max-w-7xl w-full">
 
         <div className="relative rounded-3xl overflow-hidden shadow-2xl">
