@@ -18,17 +18,18 @@ import {
 
 const footerSections = [
   {
-    title: "Contact",
-    links: [
-      { label: "University of SKU", href: "#" },
-      {
-        label:
-          "Senate House Campus, University Road, Old Katra, Prayagraj (Allahabad), Uttar Pradesh - 211002",
-        href: "#",
-      },
-      { label: "0532-2461083", href: "tel:05322461083" },
-    ],
-  },
+  title: "Contact",
+  links: [
+    { label: "Sri Krishnadevaraya University", href: "https://www.skuniversity.ac.in" },
+    {
+      label:
+        "Registrar, Anantapuram-515003, Andhra Pradesh, India",
+      href: "#",
+    },
+    { label: "08554-255700 (O)", href: "tel:08554255700" },
+    { label: "registrar@skuniversity.ac.in", href: "mailto:registrar@skuniversity.ac.in" },
+  ],
+},
   {
     title: "For Visitors",
     links: [

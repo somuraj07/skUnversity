@@ -5,12 +5,12 @@ import { motion } from "framer-motion";
 
 export default function UsefulLinks() {
   const links = [
-    { title: "INFLIBNET", img: "/image copy 6.png", url: "#" },
-    { title: "UP CM Office", img: "/image copy 7.png", url: "#" },
-    { title: "UGC", img: "/image copy 8.png", url: "#" },
-    { title: "UGC MOOCs", img: "/image copy 9.png", url: "#" },
-    { title: "Swayam Prabha", img: "/image copy 10.png", url: "#" },
-    { title: "Cyber Dost", img: "/image copy 11.png", url: "#" },
+    { title: "INFLIBNET", img: "/image copy 6.png", url: "https://www.inflibnet.ac.in/" },
+    { title: "UP CM Office", img: "/image copy 7.png", url: "https://up.gov.in/en" },
+    { title: "UGC", img: "/image copy 8.png", url: "https://www.ugc.gov.in/" },
+    { title: "UGC MOOCs", img: "/image copy 9.png", url: "https://ugcmoocs.inflibnet.ac.in/" },
+    { title: "Swayam Prabha", img: "/image copy 10.png", url: "https://www.swayamprabha.gov.in/" },
+    { title: "Cyber Dost", img: "/image copy 11.png", url: "https://dot.gov.in/banner/cyber-dost" },
   ];
 
   return (

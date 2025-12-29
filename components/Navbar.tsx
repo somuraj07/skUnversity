@@ -11,7 +11,7 @@ const menu = [
     title: "About",
     items: [
       { label: "About University", href: "/about" },
-      { label: "Mission & Vision", href: "/about/mission-vision" },
+      { label: "Mission & Vision", href: "/misson" },
       { label: "Acts and Statutes", href: "/about/acts-and-statutes" },
       { label: "Ordinance", href: "/about/ordinance" },
       { label: "CCS (Conduct) Rules", href: "/about/ccs-conduct-rules" },
@@ -30,12 +30,11 @@ const menu = [
   {
     title: "Administration",
     items: [
-      { label: "Visitor", href: "/administration/visitor" },
-      { label: "Chief Rector", href: "/administration/chief-rector" },
       { label: "Chancellor", href: "/administration/chancellor" },
       { label: "Vice Chancellor", href: "/administration/vice-chancellor" },
-      { label: "Deans", href: "/administration/deans" },
+      { label: "Rector", href: "/administration/rector" },
       { label: "Registrar", href: "/administration/registrar" },
+      { label: "Deans", href: "/administration/deans" },
       { label: "Finance Officer", href: "/administration/finance-officer" },
       { label: "PRO", href: "/administration/pro" },
       { label: "Legal Cell", href: "/administration/legal-cell" },
@@ -162,9 +161,8 @@ export default function Navbar() {
 
       {/* 🔵 UNIVERSITY NAME ROW */}
       <div
-        className={`transition-all duration-500 ${
-          scrolled ? "bg-sky-800 shadow-md" : "bg-transparent"
-        }`}
+        className={`transition-all duration-500 ${scrolled ? "bg-sky-800 shadow-md" : "bg-transparent"
+          }`}
       >
         <div className="flex items-center justify-center gap-4 py-3">
           <Image src="/sku logo.png" alt="Logo" width={60} height={60} />
@@ -176,28 +174,26 @@ export default function Navbar() {
 
       {/* 🌫️ MENU ROW */}
       <div
-        className={`transition-all duration-500 ${
-          scrolled
+        className={`transition-all duration-500 ${scrolled
             ? "backdrop-blur-lg bg-white/20 shadow-sm"
             : "bg-transparent"
-        }`}
+          }`}
       >
         <nav className="flex justify-center gap-2 py-2">
           {menu.map((menuItem) => (
             <div key={menuItem.title} className="relative group">
               <span
-                className={`px-4 py-2 font-medium cursor-pointer transition ${
-                  scrolled
+                className={`px-4 py-2 font-medium cursor-pointer transition ${scrolled
                     ? "text-gray-900 hover:text-sky-600"
                     : "text-white hover:text-yellow-300"
-                }`}
+                  }`}
               >
                 {menuItem.title}
               </span>
 
               {menuItem.items.length > 0 && (
-<div
-  className="
+                <div
+                  className="
     absolute top-full left-0 mt-3 w-80
     rounded-2xl
     bg-white/90 backdrop-blur-xl
@@ -217,13 +213,13 @@ export default function Navbar() {
 + delay-75
 
   "
->
-<ul className="py-4 text-sm text-gray-800">
-  {menuItem.items.map((item) => (
-    <li key={item.href}>
-      <Link
-        href={item.href}
-        className="
+                >
+                  <ul className="py-4 text-sm text-gray-800">
+                    {menuItem.items.map((item) => (
+                      <li key={item.href}>
+                        <Link
+                          href={item.href}
+                          className="
           block px-5 py-2.5
           rounded-lg mx-2
           transition-all duration-200
@@ -231,12 +227,12 @@ export default function Navbar() {
           hover:text-sky-700
           hover:pl-7
         "
-      >
-        {item.label}
-      </Link>
-    </li>
-  ))}
-</ul>
+                        >
+                          {item.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
 
 
                 </div>
