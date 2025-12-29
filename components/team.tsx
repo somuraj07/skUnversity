@@ -9,18 +9,18 @@ const staffData = [
     image: "/1.jpg" // Replace with actual URL
   },
   {
-    name: "Prof. B ANITHA",
+    name: "Shri Prof. B ANITHA",
     role: "Vice-Chancellor",
     designation: "Vice-Chancellor",
 image: "/2.jpg"  },
   {
     name: "Shri Ashish Kumar Chauhan",
-    role: "Chancellor",
+    role: "Rector",
     designation: "Professor of Economics",
     image: "/3.jpg"
   },
   {
-    name: "Dr. E. RAMESH BABU",
+    name: " Shri Dr. E. RAMESH BABU",
     role: "Registrar",
     designation: "Registrar",
     image: "/4.jpg"

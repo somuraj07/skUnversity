@@ -119,25 +119,30 @@ export default function UniversityFooter() {
 
         {/* CONTACT INFO */}
         <div className="space-y-4 animate-fade-up [animation-delay:120ms]">
-          <h4 className="text-sm font-semibold uppercase tracking-wide">
-            Contact Information
-          </h4>
+  <h4 className="text-sm font-semibold uppercase tracking-wide">
+    Contact Information
+  </h4>
 
-          <ul className="space-y-3 text-sm text-white/80">
-            <li className="flex gap-2 hover:text-white transition">
-              <MapPin size={16} />
-              Anantapur, Andra Pradesh – 211002
-            </li>
-            <li className="flex gap-2 hover:text-white transition">
-              <Phone size={16} />
-              0532-2461083
-            </li>
-            <li className="flex gap-2 hover:text-white transition">
-              <Mail size={16} />
-              info@allduniv.ac.in
-            </li>
-          </ul>
-        </div>
+  <ul className="space-y-3 text-sm text-white/80">
+    <li className="flex gap-2 hover:text-white transition">
+      <MapPin size={16} />
+      Registrar, Sri Krishnadevaraya University, Anantapuram-515003, Andhra Pradesh, India
+    </li>
+    <li className="flex gap-2 hover:text-white transition">
+      <Phone size={16} />
+      08554-255700 (O)
+    </li>
+    <li className="flex gap-2 hover:text-white transition">
+      <Mail size={16} />
+      registrar@skuniversity.ac.in
+    </li>
+    <li className="flex gap-2 hover:text-white transition">
+      <ExternalLink size={16} />
+      www.skuniversity.ac.in
+    </li>
+  </ul>
+</div>
+
 
         {/* NEWSLETTER */}
         <div className="space-y-4 animate-fade-up [animation-delay:240ms]">
@@ -210,7 +215,7 @@ export default function UniversityFooter() {
       <div className="border-t border-white/20 px-6 py-5 text-xs text-white/80 flex flex-col md:flex-row justify-between gap-3">
         <span>© Copyright University of sku. All Rights Reserved.</span>
         <span className="hover:text-white transition">
-          Visitors: Web Counter
+          Developed by Shraddha
         </span>
       </div>
 
