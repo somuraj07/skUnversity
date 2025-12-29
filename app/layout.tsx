@@ -27,12 +27,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-  className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden`}
->
-  {children}
-  <UniversityFooter />
-</body>
-
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
+          {children}
+          <UniversityFooter />
+      </body>
     </html>
   );
 }
