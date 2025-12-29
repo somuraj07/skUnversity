@@ -177,8 +177,17 @@ export default function Navbar() {
         }`}
       >
         <div className="flex items-center justify-between md:justify-center gap-4 py-3 px-4 md:px-0">
-          <Image src="/sku logo.png" alt="Logo" width={60} height={60} />
-          <h1 className="text-2xl font-bold text-white tracking-wide md:block hidden">
+<Link href="/" legacyBehavior>
+      <a>
+        <Image
+          src="/sku logo.png"
+          alt="Logo"
+          width={60}
+          height={60}
+          priority
+        />
+      </a>
+    </Link>          <h1 className="text-2xl font-bold text-white tracking-wide md:block hidden">
             SRI KRISHNADEVARAYA UNIVERSITY
           </h1>
 
