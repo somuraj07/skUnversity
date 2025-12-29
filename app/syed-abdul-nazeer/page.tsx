@@ -9,6 +9,7 @@ import {
   MapPin,
   Calendar,
   Landmark,
+  Users,
 } from "lucide-react";
 
 export default function Page() {
@@ -42,6 +43,7 @@ export default function Page() {
                 { icon: Landmark, text: "Governor of Andhra Pradesh (2023–Present)" },
                 { icon: Gavel, text: "Former Judge, Supreme Court of India" },
                 { icon: Briefcase, text: "Judicial Career: 1983–2023" },
+                { icon: Users, text: "Chancellor, S.K. University" },
               ].map((item, i) => (
                 <div
                   key={i}
