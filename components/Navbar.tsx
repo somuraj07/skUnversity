@@ -30,10 +30,10 @@ const menu = [
   {
     title: "Administration",
     items: [
-      { label: "Chancellor", href: "/administration/chancellor" },
-      { label: "Vice Chancellor", href: "/administration/vice-chancellor" },
-      { label: "Rector", href: "/administration/rector" },
-      { label: "Registrar", href: "/administration/registrar" },
+      { label: "Chancellor", href: "/syed-abdul-nazeer" },
+      { label: "Vice Chancellor", href: "/vice-chancellor" },
+      { label: "Rector", href: "/rector" },
+      { label: "Registrar", href: "/registrar" },
       { label: "Deans", href: "/administration/deans" },
       { label: "Finance Officer", href: "/administration/finance-officer" },
       { label: "PRO", href: "/administration/pro" },
