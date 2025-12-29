@@ -46,7 +46,7 @@ export default function UsefulLinks() {
               },
             },
           }}
-          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 place-items-center"
+          className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 place-items-center"
         >
           {links.map((item, i) => (
             <motion.a
