@@ -20,62 +20,63 @@ export default function Page() {
 
         {/* ================= HERO ================= */}
         <motion.section
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="grid md:grid-cols-2 gap-12 items-center"
+  initial={{ opacity: 0, y: 40 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8 }}
+  className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-center"
+>
+  {/* Text Content */}
+  <div className="space-y-6 text-center md:text-left">
+    <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-sky-800">
+      Dr. Gonuguntla Venkata Naidu
+    </h1>
+
+    <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
+      Dr. Gonuguntla Venkata Naidu is a distinguished Professor of
+      Economics at Sri Krishnadevaraya University, Anantapur. With
+      more than three decades of experience in teaching, research,
+      and academic administration, he currently serves as the
+      <strong> Rector of S.K. University (since June 2024)</strong>,
+      contributing significantly to institutional governance and
+      academic excellence.
+    </p>
+
+    <div className="flex flex-wrap justify-center md:justify-start gap-3 md:gap-4">
+      {[
+        { icon: Briefcase, text: "Rector, S.K. University (2024–Present)" },
+        { icon: GraduationCap, text: "Professor of Economics" },
+        { icon: Calendar, text: "28+ Years Teaching Experience" },
+      ].map((item, i) => (
+        <div
+          key={i}
+          className="flex items-center gap-2 bg-white/90 backdrop-blur shadow-md rounded-xl px-3 py-2 sm:px-4 sm:py-2 hover:shadow-xl hover:scale-105 transition"
         >
-          <div className="space-y-6">
-            <h1 className="text-4xl md:text-5xl font-bold text-sky-800">
-              Dr. Gonuguntla Venkata Naidu
-            </h1>
+          <item.icon className="text-sky-600 w-5 h-5" />
+          <span className="text-xs sm:text-sm font-medium text-gray-800">
+            {item.text}
+          </span>
+        </div>
+      ))}
+    </div>
+  </div>
 
-            <p className="text-lg text-gray-700 leading-relaxed">
-              Dr. Gonuguntla Venkata Naidu is a distinguished Professor of
-              Economics at Sri Krishnadevaraya University, Anantapur. With
-              more than three decades of experience in teaching, research,
-              and academic administration, he currently serves as the
-              <strong> Rector of S.K. University (since June 2024)</strong>,
-              contributing significantly to institutional governance and
-              academic excellence.
-            </p>
+  {/* IMAGE */}
+  <motion.div
+    whileHover={{ scale: 1.05 }}
+    className="relative mx-auto w-full max-w-[420px] aspect-[5/6] rounded-[2.5rem] overflow-hidden shadow-[0_30px_80px_rgba(14,165,233,0.35)]"
+  >
+    <Image
+      src="/3.jpg" // replace with actual image path
+      alt="Dr. Gonuguntla Venkata Naidu"
+      fill
+      className="object-cover"
+      priority
+    />
+    {/* Soft overlay */}
+    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+  </motion.div>
+</motion.section>
 
-            <div className="flex flex-wrap gap-4">
-              {[
-                { icon: Briefcase, text: "Rector, S.K. University (2024–Present)" },
-                { icon: GraduationCap, text: "Professor of Economics" },
-                { icon: Calendar, text: "28+ Years Teaching Experience" },
-              ].map((item, i) => (
-                <div
-                  key={i}
-                  className="flex items-center gap-2 bg-white/90 backdrop-blur shadow-md rounded-xl px-4 py-2 hover:shadow-xl hover:scale-105 transition"
-                >
-                  <item.icon className="text-sky-600 w-5 h-5" />
-                  <span className="text-sm font-medium text-gray-800">
-                    {item.text}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* IMAGE */}
-           <motion.div
-                      whileHover={{ scale: 1.05 }}
-                      className="relative mx-auto w-[420px] h-[520px] rounded-[2.5rem] overflow-hidden shadow-[0_30px_80px_rgba(14,165,233,0.35)]"
-                    >
-                      <Image
-                        src="/3.jpg" // 🔁 replace with your actual image path
-                        alt="Dr. E. Ramesh Babu - Registrar"
-                        fill
-                        className="object-cover"
-                        priority
-                      />
-          
-                      {/* Soft overlay */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
-                    </motion.div>
-        </motion.section>
 
         {/* ================= PROFILE OVERVIEW ================= */}
         <motion.section

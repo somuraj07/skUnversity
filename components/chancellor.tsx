@@ -24,63 +24,62 @@ export default function Page() {
       <div className="max-w-6xl mx-auto space-y-20">
 
         {/* ================= HERO ================= */}
-        <motion.section
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="grid md:grid-cols-2 gap-12 items-center"
+      <motion.section
+  initial={{ opacity: 0, y: 40 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8 }}
+  className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-center"
+>
+  {/* Text Content */}
+  <div className="space-y-6 text-center md:text-left">
+    <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-sky-700 to-blue-600 bg-clip-text text-transparent">
+      Syed Abdul Nazeer
+    </h1>
+
+    <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
+      Syed Abdul Nazeer is a distinguished Indian jurist and public
+      servant, currently serving as the <strong>22nd Governor of Andhra Pradesh</strong>.
+      Known for his integrity, constitutional wisdom, and judicial excellence,
+      his career spans nearly four decades in India’s legal and governance framework.
+    </p>
+
+    <div className="flex flex-wrap justify-center md:justify-start gap-3 md:gap-4">
+      {[
+        { icon: Landmark, text: "Governor of Andhra Pradesh (2023–Present)" },
+        { icon: Gavel, text: "Former Judge, Supreme Court of India" },
+        { icon: Briefcase, text: "Judicial Career: 1983–2023" },
+        { icon: Users, text: "Chancellor, S.K. University" },
+      ].map((item, i) => (
+        <div
+          key={i}
+          className="flex items-center gap-2 bg-gradient-to-r from-white to-sky-50 border border-sky-100 shadow-md rounded-xl px-3 py-2 sm:px-4 sm:py-2 hover:shadow-xl hover:scale-105 transition"
         >
-          <div className="space-y-6">
-            <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-sky-700 to-blue-600 bg-clip-text text-transparent">
-              Syed Abdul Nazeer
-            </h1>
+          <item.icon className="text-sky-600 w-5 h-5" />
+          <span className="text-xs sm:text-sm font-medium text-gray-800">
+            {item.text}
+          </span>
+        </div>
+      ))}
+    </div>
+  </div>
 
-            <p className="text-lg text-gray-700 leading-relaxed">
-              Syed Abdul Nazeer is a distinguished Indian jurist and public
-              servant, currently serving as the{" "}
-              <strong>22nd Governor of Andhra Pradesh</strong>.
-              Known for his integrity, constitutional wisdom, and judicial
-              excellence, his career spans nearly four decades in India’s legal
-              and governance framework.
-            </p>
+  {/* IMAGE */}
+  <motion.div
+    whileHover={{ scale: 1.05 }}
+    className="relative mx-auto w-full max-w-[420px] aspect-[5/6] rounded-[2.5rem] overflow-hidden shadow-[0_30px_80px_rgba(14,165,233,0.35)]"
+  >
+    <Image
+      src="/1.jpg"
+      alt="Syed Abdul Nazeer"
+      fill
+      className="object-cover"
+      priority
+    />
+    {/* Soft overlay */}
+    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+  </motion.div>
+</motion.section>
 
-            <div className="flex flex-wrap gap-4">
-              {[
-                { icon: Landmark, text: "Governor of Andhra Pradesh (2023–Present)" },
-                { icon: Gavel, text: "Former Judge, Supreme Court of India" },
-                { icon: Briefcase, text: "Judicial Career: 1983–2023" },
-                { icon: Users, text: "Chancellor, S.K. University" },
-              ].map((item, i) => (
-                <div
-                  key={i}
-                  className="flex items-center gap-2 bg-gradient-to-r from-white to-sky-50 border border-sky-100 shadow-md rounded-xl px-4 py-2 hover:shadow-xl hover:scale-105 transition"
-                >
-                  <item.icon className="text-sky-600 w-5 h-5" />
-                  <span className="text-sm font-medium text-gray-800">
-                    {item.text}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* IMAGE */}
-           <motion.div
-                      whileHover={{ scale: 1.05 }}
-                      className="relative mx-auto w-[420px] h-[520px] rounded-[2.5rem] overflow-hidden shadow-[0_30px_80px_rgba(14,165,233,0.35)]"
-                    >
-                      <Image
-                        src="/1.jpg" // 🔁 replace with your actual image path
-                        alt="Dr. E. Ramesh Babu - Registrar"
-                        fill
-                        className="object-cover"
-                        priority
-                      />
-          
-                      {/* Soft overlay */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
-                    </motion.div>
-        </motion.section>
 
         {/* ================= PERSONAL DETAILS ================= */}
         <motion.section

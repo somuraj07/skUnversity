@@ -22,63 +22,62 @@ export default function Page() {
       <div className="relative max-w-6xl mx-auto space-y-24">
 
         {/* ================= HERO ================= */}
-        <motion.section
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, ease: "easeOut" }}
-          className="grid md:grid-cols-2 gap-14 items-center"
+       <motion.section
+  initial={{ opacity: 0, y: 50 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.9, ease: "easeOut" }}
+  className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14 items-center"
+>
+  {/* Text Content */}
+  <div className="space-y-6 md:space-y-7 text-center md:text-left">
+    <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-sky-900 tracking-tight">
+      Dr. Bommagowni Anitha
+    </h1>
+
+    <p className="text-base sm:text-lg md:text-lg text-gray-700 leading-relaxed">
+      Dr. Bommagowni Anitha is a highly respected academician and
+      administrator, currently serving as the
+      <strong> Vice-Chancellor of Sri Krishnadevaraya University</strong>.
+      With nearly three decades of dedicated service in higher
+      education, she is widely recognized for her excellence in
+      teaching, research, leadership, and community engagement.
+    </p>
+
+    <div className="flex flex-wrap justify-center md:justify-start gap-3 md:gap-4 pt-2">
+      {[
+        { icon: Briefcase, text: "30 Years Academic Experience" },
+        { icon: GraduationCap, text: "Professor – Management Studies" },
+        { icon: Users, text: "Vice-Chancellor, S.K. University" },
+      ].map((item, i) => (
+        <motion.div
+          key={i}
+          whileHover={{ scale: 1.08 }}
+          className="flex items-center gap-2 bg-white/80 backdrop-blur-md border border-sky-100 shadow-lg rounded-xl px-3 py-2 sm:px-4 sm:py-2"
         >
-          <div className="space-y-7">
-            <h1 className="text-4xl md:text-5xl font-extrabold text-sky-900 tracking-tight">
-              Dr. Bommagowni Anitha
-            </h1>
+          <item.icon className="text-sky-600 w-5 h-5" />
+          <span className="text-xs sm:text-sm font-semibold text-gray-800">
+            {item.text}
+          </span>
+        </motion.div>
+      ))}
+    </div>
+  </div>
 
-            <p className="text-lg text-gray-700 leading-relaxed">
-              Dr. Bommagowni Anitha is a highly respected academician and
-              administrator, currently serving as the
-              <strong> Vice-Chancellor of Sri Krishnadevaraya University</strong>.
-              With nearly three decades of dedicated service in higher
-              education, she is widely recognized for her excellence in
-              teaching, research, leadership, and community engagement.
-            </p>
-
-            <div className="flex flex-wrap gap-4 pt-2">
-              {[
-                { icon: Briefcase, text: "30 Years Academic Experience" },
-                { icon: GraduationCap, text: "Professor – Management Studies" },
-                { icon: Users, text: "Vice-Chancellor, S.K. University" },
-              ].map((item, i) => (
-                <motion.div
-                  key={i}
-                  whileHover={{ scale: 1.08 }}
-                  className="flex items-center gap-2 bg-white/80 backdrop-blur-md border border-sky-100 shadow-lg rounded-xl px-4 py-2"
-                >
-                  <item.icon className="text-sky-600 w-5 h-5" />
-                  <span className="text-sm font-semibold text-gray-800">
-                    {item.text}
-                  </span>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-
-          {/* IMAGE */}
-           <motion.div
-                      whileHover={{ scale: 1.05 }}
-                      className="relative mx-auto w-[420px] h-[520px] rounded-[2.5rem] overflow-hidden shadow-[0_30px_80px_rgba(14,165,233,0.35)]"
-                    >
-                      <Image
-                        src="/2.jpg" // 🔁 replace with your actual image path
-                        alt="Dr. E. Ramesh Babu - Registrar"
-                        fill
-                        className="object-cover"
-                        priority
-                      />
-          
-                      {/* Soft overlay */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
-                    </motion.div>
-        </motion.section>
+  {/* Image */}
+  <motion.div
+    whileHover={{ scale: 1.05 }}
+    className="relative mx-auto w-full max-w-[420px] aspect-[5/6] rounded-[2.5rem] overflow-hidden shadow-[0_30px_80px_rgba(14,165,233,0.35)]"
+  >
+    <Image
+      src="/2.jpg"
+      alt="Dr. Bommagowni Anitha"
+      fill
+      className="object-cover"
+      priority
+    />
+    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+  </motion.div>
+</motion.section>
 
         {/* ================= PROFILE HIGHLIGHTS ================= */}
         <motion.section
